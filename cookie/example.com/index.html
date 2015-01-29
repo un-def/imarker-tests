@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cookie Monster</title>
+	<script>
+		window.onload = function() {
+			var rnd = Math.random().toString(36).substring(7);
+			document.getElementById('rnd').innerHTML = rnd;
+			document.getElementById('link').href = 'http://sub.example.com/'+rnd;
+			document.cookie='cookie='+rnd+'; expires=Fri, 1 Jan 2016 00:00:00 UTC; domain=.example.com; path=/'+rnd;
+		}
+	</script>
+</head>
+<body>
+<p>Поздравляем! Вы наш миллионный посетитель. Ваш приз &mdash; <strong>уникальная</strong> кука: <span id="rnd"></span></p>
+<p><a href="#" id="link">Нажмите сюда</a>, чтобы рассказать об этом всем!</p>
+</body>
+</html>
